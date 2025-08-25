@@ -14,19 +14,15 @@ def main():
     print("Screen width: 1280")
     print("Screen height: 720") 
 
-    
-    
-    BLACK = (0, 0, 0)
 
-    running = True
-
-    while running:
+    while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
             
-        screen.fill(BLACK)
+        screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip() 
         
         
